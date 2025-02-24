@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+<title>Multi Wizard Form</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class = "form_reg">
+<form id="register" action="\">
+    
+    <div class="tab">
+        <h2>Register</h2>
+        <label>Name :</label>
+        <small class="error"></small> 
+        <input type="text" placeholder="First Name" id="f_name" oninput="display()" required>
+        <small class="error"></small>
+        <input type="text" placeholder="LastName" id="l_name" oninput="display()" required>
+    </div>
+    <div class="tab">
+        <h2>Register</h2>
+        <label>Contact :</label>
+        <small class="error"></small>
+        <input type="email" placeholder="email" id="u_email" oninput="display()">
+        <small class="error"></small>
+        <input type="number" placeholder="mobile" id="u_mobile" oninput="display()">
+    </div>
+    <div class="tab">
+        <h2>Register</h2>
+        <label for="state">Select the state :</label>
+        <small class="error"></small>
+        <select name="state" id="state" oninput="display()" onchange="onToggle()">
+            <option value="select">Select</option>
+            <option value="TamilNadu">TamilNadu</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Andhrapradesh">Andhrapradesh</option>
+            <option value="Karnataka">Karnataka</option>
+            
+        </select>
+       
+        <label for="district">Select the District :</label>
+        <select name="district" id="district" oninput="display()" disabled>
+            <option value="select">Select</option>
+        </select>
+    </div>
+    <div class="tab">
+        <h2> Confirmation Page</h2>
+        <label>Name :</label>
+        <p id="first_name"></p>
+        <p id="last_name"></p>
+
+        <label>Contact :</label>
+        <p id="user_email"></p>
+        <p id="user_mobile"></p>
+
+        <label>State :</label>
+        <p id="user_state"></p>
+
+        <label>District :</label>
+        <p id="user_district"></p>
+        <small class="error"></small>
+        <input type="checkbox" name="ack" value="" required id="checkBox">
+        <label for="ack">I here by declare that the details are true</label>
+    </div>
+    <div class="tab">
+        <h2>Form Submitted!</h2>
+        <p id = "form_submitted">Thank You!</p>
+    </div>
+  
+    <div class = "button">
+        
+          <button type="button" id="prevBtn" onclick="nextPrev(-1)" style="float: left;">Previous</button>
+          <button type="button" id="nextBtn" onclick="nextPrev(1)" style="float: right;">Next</button>
+     
+      </div>
+      <div class="circle">
+        <Span class = "step"></Span>
+        <Span class = "step"></Span>
+        <Span class = "step"></Span>
+        <Span class = "step"></Span>
+    </div>
+</form>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
