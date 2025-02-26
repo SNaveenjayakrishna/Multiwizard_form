@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(){
     var body = document.querySelector('body');
     function createBubble(){
     var circle = document.createElement('span');
-        
+        circle.classList.add('bubble');
         // Generate random x and y positions within the viewport
         var x = Math.random() * window.innerWidth;
         var y = Math.random() * window.innerHeight;
